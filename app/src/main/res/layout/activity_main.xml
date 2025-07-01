@@ -1,0 +1,912 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:background="@drawable/splash"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroller"
+            android:layout_alignParentTop="true"
+            android:scrollbars="none"
+            android:layout_above="@id/bannerId"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="bold"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="EMI Calculator"
+                    android:layout_height="wrap_content"/>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="13sp"
+                    android:gravity="center"
+
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/whiteTheme"
+                    android:text="This Tool that Helps Calculate the Monthly\n payments require to repay loans."
+                    android:layout_height="wrap_content"/>
+
+                <RelativeLayout
+                    android:layout_width="220dp"
+                    android:onClick="emi"
+                    android:layout_gravity="center"
+                    android:background="@drawable/icon_emi"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="30dp"
+                    app:cardBackgroundColor="@color/colorAccent"
+                    android:layout_height="50dp">
+
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nativeId"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:orientation="vertical"
+
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="20dp">
+
+
+                    <LinearLayout
+                        android:id="@+id/firstlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:elevation="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/dashboard_button"
+                            android:onClick="loanelgibility"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_margin="5dp"
+                                app:cardBackgroundColor="@color/colorAccent"
+                                app:cardCornerRadius="30dp">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/ic_eligibility"
+                                    app:tint="@color/whiteTheme" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_alignParentBottom="true"
+
+                                android:layout_marginStart="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="Loan\nEligibility"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="6dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/dashboard_button"
+                            android:onClick="compareloan"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_margin="5dp"
+                                app:cardBackgroundColor="@color/colorAccent"
+                                app:cardCornerRadius="30dp">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="17dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/ic_compareloan" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+
+                                android:layout_marginStart="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="Compare\nLoans"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/dashboard_button"
+                            android:onClick="currency"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_margin="5dp"
+                                app:cardBackgroundColor="@color/colorAccent"
+                                app:cardCornerRadius="30dp">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/ic_currencyconvert" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_alignParentBottom="true"
+
+                                android:layout_marginStart="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="Currency\nConversion"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="15sp"
+
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/dashboard_button"
+                            android:onClick="tax"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_margin="5dp"
+                                app:cardBackgroundColor="@color/colorAccent"
+                                app:cardCornerRadius="30dp">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/ic_tax" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="5dp"
+
+                                android:layout_marginStart="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="Tax\n Calculator"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/dashboard_button"
+                            android:onClick="fd"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_margin="5dp"
+                                app:cardBackgroundColor="@color/colorAccent"
+                                app:cardCornerRadius="30dp">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/ic_fd" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="5dp"
+
+                                android:layout_marginStart="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="FD\nCalculator"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/dashboard_button"
+                            android:onClick="rd"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_margin="5dp"
+                                app:cardBackgroundColor="@color/colorAccent"
+                                app:cardCornerRadius="30dp">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/ic_rd" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="5dp"
+
+                                android:layout_marginStart="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="RD\n Calculator"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/dashboard_button"
+                            android:onClick="ppf"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_margin="5dp"
+                                app:cardBackgroundColor="@color/colorAccent"
+                                app:cardCornerRadius="30dp">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/ic_ppf" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="5dp"
+
+                                android:layout_marginStart="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="PPF\nCalculator"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="15sp"
+
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/dashboard_button"
+                            android:onClick="simpleandcomp"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_margin="5dp"
+                                app:cardBackgroundColor="@color/colorAccent"
+                                app:cardCornerRadius="30dp">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/ic_simoleinterset" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_alignParentBottom="true"
+
+                                android:layout_marginStart="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="Simple &amp;\nCompound"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="15sp"
+
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="6dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/dashboard_button"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:tag="1"
+                            android:visibility="invisible" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/dashboard_button"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="invisible" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/dashboard_button"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="invisible" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="6dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/dashboard_button"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/open_sans"
+                            android:text="Bank and Atm"
+                            android:textColor="@color/whiteTheme"
+                            android:textSize="14sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/open_sans"
+                            android:text=" Finder"
+                            android:textColor="@color/whiteTheme"
+                            android:textSize="14sp"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="6dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/dashboard_button"
+                            android:onClick="finder"
+                            android:orientation="vertical"
+                            android:tag="0">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_margin="5dp"
+                                app:cardBackgroundColor="@color/colorAccent"
+                                app:cardCornerRadius="30dp">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/ic_bankfinder" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_alignParentBottom="true"
+
+                                android:layout_marginStart="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="Bank\nFinder"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="15sp"
+
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="6dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/dashboard_button"
+                            android:onClick="finder"
+                            android:orientation="vertical"
+                            android:tag="1">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_margin="5dp"
+                                app:cardBackgroundColor="@color/colorAccent"
+                                app:cardCornerRadius="30dp">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/ic_atm" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_alignParentBottom="true"
+
+                                android:layout_marginStart="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="ATM\nFinder"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="15sp"
+
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="6dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/dashboard_button"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:tag="1"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/open_sans"
+                            android:text="Investment"
+                            android:textColor="@color/whiteTheme"
+                            android:textSize="14sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/open_sans"
+                            android:text=" Calculator"
+                            android:textColor="@color/whiteTheme"
+                            android:textSize="14sp"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:background="@drawable/dashboard_button"
+                        android:gravity="center_vertical"
+                        android:onClick="swp"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_margin="5dp"
+                            app:cardBackgroundColor="@color/colorAccent"
+                            app:cardCornerRadius="30dp">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_swp" />
+                        </androidx.cardview.widget.CardView>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center"
+                            android:text="Systematic Withdrawal Plan"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:background="@drawable/dashboard_button"
+                        android:gravity="center_vertical"
+                        android:onClick="sip"
+                        android:orientation="horizontal">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_margin="5dp"
+                            app:cardBackgroundColor="@color/colorAccent"
+                            app:cardCornerRadius="30dp">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_sip" />
+                        </androidx.cardview.widget.CardView>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center"
+                            android:text="Systematic Investment Plan"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:background="@drawable/dashboard_button"
+                        android:gravity="center_vertical"
+                        android:onClick="saving"
+                        android:orientation="horizontal">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_margin="5dp"
+                            app:cardBackgroundColor="@color/colorAccent"
+                            app:cardCornerRadius="30dp">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_equity" />
+                        </androidx.cardview.widget.CardView>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center"
+                            android:text="Equity Linked Saving Scheme"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:background="@drawable/dashboard_button"
+                        android:gravity="center_vertical"
+                        android:onClick="lumpsum"
+                        android:orientation="horizontal">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_margin="5dp"
+                            app:cardBackgroundColor="@color/colorAccent"
+                            app:cardCornerRadius="30dp">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_lumpsum" />
+                        </androidx.cardview.widget.CardView>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center"
+                            android:text="Lumpsum Calculator"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/nativead"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="80dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="20dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <FrameLayout
+            android:id="@+id/blur"
+            android:background="#00ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="10dp"
+            android:id="@+id/btnMenu"
+            android:src="@drawable/menu_svgrepo_com"
+            app:tint="@color/whiteTheme" />
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/exit"
+            android:background="@drawable/layout_activity"
+            android:paddingLeft="10dp"
+            android:paddingTop="20dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="20dp"
+            android:visibility="gone"
+            android:layout_width="300dp"
+            android:layout_height="300dp">
+
+            <TextView
+                android:textSize="16dp"
+                android:textColor="@color/colorMain"
+                android:gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Do You really want to exit"
+                android:fontFamily="@font/open_sans" />
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <Button
+                    android:textSize="13dp"
+                    android:textColor="@color/whiteTheme"
+                    android:gravity="center"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/yes"
+                    android:background="@drawable/buttonshape"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="5dp"
+                    android:text="Yes"
+                    android:layout_weight="1"
+                    android:onClick="yes"
+                    android:fontFamily="@font/open_sans" />
+
+                <Button
+                    android:textSize="13dp"
+                    android:textColor="@color/whiteTheme"
+                    android:gravity="center"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/no"
+                    android:background="@drawable/buttonshape"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="No"
+                    android:layout_weight="1"
+                    android:onClick="no"
+                    android:fontFamily="@font/open_sans" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/bannerId"
+            android:orientation="horizontal" />
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_gravity="start"
+        android:id="@+id/nav_view"
+        android:background="@color/backColor"
+        android:layout_width="wrap_content"
+
+        android:layout_height="match_parent"
+        app:headerLayout="@layout/header"
+        app:itemIconTint="@color/whiteTheme"
+        app:itemTextColor="@color/whiteTheme"
+
+        app:menu="@menu/drawer" />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

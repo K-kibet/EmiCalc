@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/layout_activity"
+    android:paddingLeft="30dp"
+    android:paddingTop="25dp"
+    android:paddingRight="30dp"
+    android:paddingBottom="25dp"
+    android:layout_width="250dp"
+    android:layout_height="400dp">
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/icon200" />
+
+
+    <TextView
+        android:textSize="13dp"
+        android:textColor="@color/blackTheme"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Are you sure to exit"
+        android:fontFamily="@font/open_sans" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/yes"
+            android:textSize="13dp"
+            android:textColor="@color/cardview_light_background"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/buttonshape"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginRight="5dp"
+            android:text="Yes"
+            android:layout_weight="1"
+            android:fontFamily="@font/open_sans" />
+
+        <Button
+            android:id="@+id/no"
+            android:textSize="13dp"
+            android:textColor="@color/colorMain"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/buttonshape2"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:text="No"
+            android:layout_weight="1"
+            android:fontFamily="@font/open_sans" />
+    </LinearLayout>
+</LinearLayout>

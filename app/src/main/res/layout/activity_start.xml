@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash"
+    tools:context=".StartActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/cashloan_emi_calculator"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="This App Helps you Calculate any type of loan\nand get an Idea of your loan amount"
+        android:textColor="@color/colorBlack"
+        android:textSize="13sp"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <FrameLayout
+        app:layout_constraintBottom_toTopOf="@id/btnStart"
+        android:layout_width="match_parent"
+        android:id="@+id/nativeId"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:id="@+id/btnStart"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="20dp"
+        android:src="@drawable/btn_letscalculate"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="20dp">
+
+        <ImageView
+            android:id="@+id/btnPrivacy"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/btn_privacy" />
+
+        <ImageView
+            android:id="@+id/btnShare"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/btn_share" />
+
+        <ImageView
+            android:id="@+id/btnRate"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/btn_rate" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

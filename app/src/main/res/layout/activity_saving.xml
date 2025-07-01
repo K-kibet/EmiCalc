@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backColor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/banner1"
+        android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardBackgroundColor="@color/cardColor1"
+
+            android:layout_height="50dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Equity Linked Saving Scheme"
+                android:textSize="17sp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/whiteTheme"
+                android:layout_gravity="center"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroller"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-35dp"
+            android:scrollbars="none"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:id="@+id/mainlinear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="0dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="30dp"
+                        android:background="@drawable/innershape"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/open_sans"
+                            android:text="Investment Amount*"
+                            android:textColor="@color/blackTheme"
+                            android:textSize="15sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:backgroundTint="@color/backColor"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/innershape"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/InvestmentAmount"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:ems="10"
+                                android:fontFamily="@font/open_sans"
+                                android:inputType="numberDecimal"
+                                android:padding="4dp"
+                                android:textColor="@color/blackTheme"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="9"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:text=""
+                                android:textColor="@color/blackTheme"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:fontFamily="@font/open_sans"
+                                android:text="Expected Rate of Interest*"
+                                android:textColor="@color/blackTheme"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/open_sans"
+                                android:text="(max 50% per annum)"
+                                android:textColor="@color/colorGrey"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:backgroundTint="@color/backColor"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/innershape"
+                            android:orientation="horizontal"
+                            android:textColor="@color/blackTheme">
+
+                            <EditText
+                                android:id="@+id/interestamoount"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:ems="10"
+                                android:fontFamily="@font/open_sans"
+                                android:inputType="numberDecimal"
+                                android:maxEms="50"
+                                android:padding="4dp"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="9"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:text="%"
+                                android:textColor="@color/blackTheme"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:fontFamily="@font/open_sans"
+                                android:text="Tenure*"
+                                android:textColor="@color/blackTheme"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/open_sans"
+                                android:text="(max 30yr)"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:backgroundTint="@color/backColor"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/innershape"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/tenure"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:ems="10"
+                                android:fontFamily="@font/open_sans"
+                                android:inputType="numberDecimal"
+                                android:maxEms="30"
+                                android:padding="4dp"
+                                android:textColor="@color/blackTheme"
+                                android:textSize="16sp" />
+
+                            <RadioGroup
+                                android:id="@+id/togle"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
+                                android:background="@drawable/toggle"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/year"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/togglewidget"
+                                    android:button="@null"
+                                    android:checked="true"
+                                    android:fontFamily="@font/open_sans"
+                                    android:gravity="center"
+                                    android:text="year"
+                                    android:textColor="@color/blackTheme"
+                                    android:textSize="10sp" />
+
+                                <RadioButton
+                                    android:id="@+id/month"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/togglewidget"
+                                    android:button="@null"
+                                    android:checked="false"
+                                    android:fontFamily="@font/open_sans"
+                                    android:gravity="center"
+                                    android:text="month"
+                                    android:textColor="@color/blackTheme"
+                                    android:textSize="10sp" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="33dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="30dp"
+                            android:backgroundTint="@color/backColor"
+                            android:background="@drawable/innershape"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <Button
+                                android:id="@+id/date"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/backColor"
+                                android:fontFamily="@font/open_sans"
+                                android:gravity="left"
+                                android:text="Saving Date:"
+                                android:textColor="@color/blackTheme"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="9"
+                                android:background="@android:drawable/ic_menu_agenda" />
+                        </LinearLayout>
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/buttonshape"
+                            android:fontFamily="@font/open_sans"
+                            android:onClick="calculate"
+                            android:text="Calculate"
+                            android:textColor="@color/cardview_light_background"
+                            android:textSize="15sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="30dp"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/statisticbutton"
+                                android:fontFamily="@font/open_sans"
+                                android:onClick="statistic"
+                                android:text="Statistics"
+                                android:textColor="@color/blackTheme"
+                                android:textSize="15sp" />
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1.6"
+                                android:background="@drawable/statisticbutton"
+                                android:fontFamily="@font/open_sans"
+                                android:onClick="save"
+                                android:text="Save"
+                                android:textColor="@color/blackTheme"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="30dp"
+                        android:background="@drawable/innershape"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/open_sans"
+                                android:gravity="center"
+                                android:text="Investment Amount"
+                                android:textColor="@color/blackTheme"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/investment"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/open_sans"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/colorMain"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/innershape"
+                            android:orientation="vertical"
+                            android:padding="20dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/open_sans"
+                                android:gravity="center"
+                                android:text="Total Interest Value"
+                                android:textColor="@color/blackTheme"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/totalinterest"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="@font/open_sans"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/colorMain"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/textshape"
+                            android:orientation="vertical"
+                            android:padding="20dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/open_sans"
+                                android:gravity="center_horizontal"
+                                android:text="Maturity Date"
+                                android:textColor="@color/blackTheme"
+                                android:textSize="15sp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/finaldate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/open_sans"
+                                    android:text=""
+                                    android:textColor="@color/blackTheme"
+                                    android:textSize="15sp" />
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="8"
+                                    android:background="@android:drawable/ic_menu_agenda" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="30dp"
+                            android:background="@drawable/innershape"
+                            android:orientation="vertical"
+                            android:padding="20dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/open_sans"
+                                android:gravity="center"
+                                android:text="Maturity Value"
+                                android:textColor="@color/blackTheme"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:id="@+id/MaturityValue"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="@font/open_sans"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/colorMain"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/buttonshape"
+                                    android:fontFamily="@font/open_sans"
+                                    android:gravity="center"
+                                    android:onClick="share"
+                                    android:text="Share Result"
+                                    android:textColor="@color/cardview_light_background"
+                                    android:textSize="13dp" />
+
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/buttonshape"
+                                    android:fontFamily="@font/open_sans"
+                                    android:gravity="center"
+                                    android:onClick="pdf"
+                                    android:text="Convert PDF"
+                                    android:textColor="@color/cardview_light_background"
+                                    android:textSize="13dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/nativead"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="60dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="20dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <FrameLayout
+            android:id="@+id/blur"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00ffffff" />
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="230dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/banner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center" />
+
+    </RelativeLayout>
+</RelativeLayout>

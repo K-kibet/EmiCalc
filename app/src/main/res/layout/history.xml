@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:background="@drawable/layout_activity"
+    android:paddingLeft="10dp"
+    android:paddingTop="25dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="25dp"
+    android:layout_width="300dp"
+    android:layout_height="500dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:textSize="18sp"
+            android:textColor="@color/blackTheme"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="HISTORY"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:layout_gravity="right"
+            android:id="@+id/canceling"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/ic_baseline_cancel_presentation_24"
+            android:layout_weight="8" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/historyList"
+        android:padding="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

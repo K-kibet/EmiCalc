@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EmiCalc"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".StartActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true" />
+
+        <activity
+            android:name=".FIles.splash"
+            android:exported="true"
+            android:theme="@style/AppTheme.TransparentTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FIles.PrivacyAndAbout"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Calculations.Swp"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Calculations.saving"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Calculations.compareloan"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Calculations.lumpsum"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Calculations.ppf"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Calculations.Rd"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Calculations.Fd"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Calculations.Sip"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Calculations.loaneligibility"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Calculations.SimpleAndCompound"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Calculations.Currency"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Calculations.Tax"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Calculations.emi"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".FIles.MainActivity"
+            android:theme="@style/AppTheme" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

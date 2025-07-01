@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF8963</color>
+    <color name="colorWhite">#000</color>
+    <color name="whiteTheme">#000</color>
+    <color name="colorMain">#FF8963</color>
+    <color name="blackTheme">#000</color>
+    <color name="dashboard">#eae8e3</color>
+    <color name="colorPrimaryDark">#FF8963</color>
+    <color name="colorBrownishText">#948a54</color>
+    <color name="colorGrey">#c3c3c3</color>
+    <color name="cardview_light_background">#ffffffff</color>
+    <color name="colorRed">#f44336</color>
+    <color name="colorBlack">#000</color>
+    <color name="colorAccent">#FF8963</color>
+
+    <color name="backColor">#FFFFFF</color>
+    <color name="cardColor">#FFEEE7</color>
+    <color name="cardColor1">#fff</color>
+
+
+</resources>

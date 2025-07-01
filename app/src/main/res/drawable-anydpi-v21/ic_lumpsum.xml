@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="100dp"
+    android:width="104dp"
+    android:viewportWidth="104"
+    android:viewportHeight="100">
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M2,14.894h19.512v51.064h-19.512z"
+        android:strokeColor="#fff"
+        android:strokeWidth="2.5" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M41.024,34.043h21.951v51.064h-21.951z"
+        android:strokeColor="#fff"
+        android:strokeWidth="2.5" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M80.049,17.021h21.951v51.064h-21.951z"
+        android:strokeColor="#fff"
+        android:strokeWidth="2.5" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M10.567,0L10.567,14.894"
+        android:strokeColor="#fff"
+        android:strokeWidth="2.5" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M10.567,65.957L10.567,80.851"
+        android:strokeColor="#fff"
+        android:strokeWidth="2.5" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M10.567,65.957L10.567,80.851"
+        android:strokeColor="#fff"
+        android:strokeWidth="2.5" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M91.055,2.128L91.055,17.021"
+        android:strokeColor="#fff"
+        android:strokeWidth="2.5" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M91.055,68.085L91.055,82.979"
+        android:strokeColor="#fff"
+        android:strokeWidth="2.5" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M52.03,19.149L52.03,34.042"
+        android:strokeColor="#fff"
+        android:strokeWidth="2.5" />
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M52.03,85.106L52.03,100"
+        android:strokeColor="#fff"
+        android:strokeWidth="2.5" />
+</vector>

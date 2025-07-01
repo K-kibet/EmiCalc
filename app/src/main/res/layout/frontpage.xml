@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/layout_activity"
+    android:paddingLeft="30dp"
+    android:paddingTop="25dp"
+    android:paddingRight="30dp"
+    android:paddingBottom="25dp"
+    android:layout_width="250dp"
+    android:layout_height="400dp">
+
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/save"
+        android:layout_weight="4" />
+
+    <TextView
+        android:textSize="16dp"
+        android:textColor="@color/blackTheme"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Welcome to full proof  financial calculator app "
+        android:fontFamily="@font/open_sans" />
+
+    <TextView
+        android:textSize="13dp"
+        android:textColor="@color/blackTheme"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Making all type\nof calculations easy and\nsimple"
+        android:fontFamily="@font/open_sans" />
+
+    <Button
+        android:textSize="13dp"
+        android:textColor="@color/cardview_light_background"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/okay"
+        android:background="@drawable/buttonshape"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="10dp"
+        android:text="Okay"
+        android:fontFamily="@font/open_sans" />
+</LinearLayout>
