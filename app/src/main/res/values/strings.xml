@@ -2,18 +2,20 @@
 <resources>
     <string name="app_name">EMI</string>
     <string name="appbar_scrolling_view_behavior">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
-    <string name="bannerAds">ca-app-pub-3940256099942544/6300978111</string>
     <string name="investmentAmount">Investment Amount*</string>
     <string name="maturityDate">Maturity Date</string>
     <string name="mail">feedback.arpa@gmail.com</string>
-    <string name="nativeAds">ca-app-pub-3940256099942544/2247696110</string>
     <string name="premiumAppLink">https://play.google.com/store/apps/details?id=com.emipremium</string>
     <string name="appLink">https://play.google.com/store/apps/details?id=com.sampledata.emi</string>
-    <string name="InterstialAds">ca-app-pub-3940256099942544/1033173712</string>
     <string name="apiLinkCurrencyConverter">Enter the Value of Api Link</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="simple_amp_compound_interset"><![CDATA[Simple & Compound Interset]]></string>
     <string name="cashloan_emi_calculator">CashLoan - EMI Calculator</string>
     <string name="select_your_profession">Select your profession</string>
+
+    <string name="admobAppId">ca-app-pub-8271781915615155~2358077120</string>
+    <string name="bannerAds">ca-app-pub-8271781915615155/3380634310</string>
+    <string name="InterstialAds">ca-app-pub-8271781915615155/8441389300</string>
+    <string name="nativeAds">ca-app-pub-8271781915615155/6916554646</string>
 </resources>
